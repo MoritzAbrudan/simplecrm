@@ -5,23 +5,19 @@
                 Name
             </th>
             <th>
-                Birthday
+                E-Mail
             </th>
             <th>
                 Street
             </th>
             <th>
-                Zip Code
-            </th>
-            <th>
                 City
             </th>
         </tr>
-        <tr *ngFor="let user of allUsers">
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.customIdName]">
             <td>{{ user.firstName }} {{ user.lastName }}</td>
-            <td>{{ user.birthDate }}</td>
+            <td>{{ user.email }}</td>
             <td>{{ user.street }}</td>
-            <td>{{ user.zipCode }}</td>
             <td>{{ user.city }}</td>
         </tr>
     </table>
